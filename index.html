@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyak</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                    <div class="container-fluid">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Könyvek</a>
+                        </li>
+                       <li class="nav-item">
+                          <a class="nav-link" href="#">Vásárlók</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Inkatív link</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="col-sm-12">
+                <h1>Vásárló</h1>
+                <form>
+                    <fieldset class="border rounded p-3">
+                        <div class="mb-3">
+                            <label for="vasarloID" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="vasarloID" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nev" class="form-label">Név</label>
+                            <input type="text" class="form-control" id="nev" placeholder="Teljes név">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="text" class="form-control" id="email" placeholder="pelda@email.hu">
+                        </div>
+                        <div class="mb-3">
+                            <label for="felhasznalonev" class="form-label">Felhasználónév</label>
+                            <input type="text" class="form-control" id="felhasznalonev">
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-sm-6">
+                                <div>
+                                    <label for="jelszo1" class="form-label">Jelszó</label>
+                                    <input type="text" class="form-control" id="jelszo1" placeholder="**********">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <label for="jelszo2" class="form-label">Jelszó újra</label>
+                                    <input type="text" class="form-control" id="jelszo2" placeholder="**********">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-4 d-sm-flex justify-content-between">
+                            <button type="button" class="btn btn-primary" id="btnCreate">Hozzáadás</button>
+                            <button type="button" class="btn btn-success" id="btnReadAll">Vásárlók megjelenítése</button>
+                            <button type="button" class="btn btn-danger" id="btnDelete">Törlés</button>
+                            <button type="button" class="btn btn-warning" id="btnUpdate">Módosítás</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="row my-4" id="osszesVasarlo">
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
